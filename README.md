@@ -1,4 +1,4 @@
-## Fatih Dağ'a Özel Yapay Zeka (LLM & NLP Odaklı) Yol Haritası
+## Özel Yapay Zeka (LLM & NLP Odaklı) Yol Haritası
 
  Mevcut yazılım mimarisi bilgin ve pratik proje deneyiminle, bu yol haritası seni LLM'lerin derinliklerine ve uygulamalarına hızla taşıyacak şekilde tasarlandı. Temel matematiksel ve programlama yetkinliklerin zaten olduğu varsayılmıştır.
 
