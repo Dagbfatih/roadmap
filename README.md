@@ -1,129 +1,95 @@
-# Yapay Zeka Öğrenim Yol Haritası
+## Fatih Dağ'a Özel Yapay Zeka (LLM & NLP Odaklı) Yol Haritası
 
-Bu yol haritası, yapay zekayı temelden ileri düzeye kadar öğrenmek isteyenler için kapsamlı kaynaklar sunar. Hem İngilizce hem de Türkçe seçeneklerle, adım adım ilerleyerek yapay zeka alanında sağlam bir temel oluşturabilir ve Büyük Dil Modelleri (LLM'ler) gibi ileri konulara geçiş yapabilirsin.
+ Mevcut yazılım mimarisi bilgin ve pratik proje deneyiminle, bu yol haritası seni LLM'lerin derinliklerine ve uygulamalarına hızla taşıyacak şekilde tasarlandı. Temel matematiksel ve programlama yetkinliklerin zaten olduğu varsayılmıştır.
 
----
+ ### Faz 1: Doğal Dil İşleme (NLP) Temelleri ve İleri Konular (2-4 Hafta)
 
-## 🚀 İngilizce Eğitim Kaynakları 🇬🇧
+ Bu faz, LLM'lerin temelini oluşturan NLP konularına odaklanacak.
 
-### Adım 1: Temel Yapay Zeka Kavramları, Lineer Cebir ve Vektörler
+ * **1.1 Metin Ön İşleme ve Temel NLP:**
+     * **Konular:** Tokenizasyon, Stemming, Lemmatization, Durdurma Kelimeleri (Stop Words), N-gramlar, Metin normalizasyonu.
+     * **Kütüphaneler:** **NLTK**, **SpaCy**. Bu kütüphanelerle metin üzerinde pratik uygulamalar yap.
+     * **Kaynaklar:**
+         * Coursera: "Natural Language Processing in TensorFlow" (Andrew Ng'in deeplearning.ai uzmanlığının bir parçası veya benzeri kurslar).
+         * NLTK Kitabı (Online): `nltk.org/book/`
+         * SpaCy Dokümantasyonu: `spacy.io/usage/`
+ * **1.2 Gömülü Temsiller (Embeddings):**
+     * **Konular:** Word2Vec, GloVe, FastText. Kelime gömülü temsil algoritmalarının nasıl çalıştığını, neden önemli olduklarını ve vektör uzayında kelime ilişkilerini nasıl yakaladıklarını anla.
+     * **Uygulama:** Kendi Word2Vec modelini küçük bir veri kümesi üzerinde eğitmeyi dene.
+     * **Kaynaklar:** Medium ve Towards Data Science'taki açıklayıcı makaleler, Gensim kütüphanesinin Word2Vec tutorial'ları.
+ * **1.3 Sekans Modelleme (RNN, LSTM, GRU):**
+     * **Konular:** Tekrarlayan Sinir Ağları (RNN), Uzun Kısa Süreli Bellek (LSTM), Gated Recurrent Unit (GRU). Metin verilerindeki sıralı ilişkileri modellemek için bu mimarilerin nasıl çalıştığını ve zayıf yönlerini anla.
+     * **Kütüphaneler:** **TensorFlow** veya **PyTorch** ile basit RNN/LSTM modelleri kurup dene.
+     * **Kaynaklar:** deeplearning.ai "Sequence Models" kursu (Deep Learning Specialization'ın bir parçası), TensorFlow/PyTorch resmi dokümantasyonları.
 
-Bu aşama, yapay zekanın matematiksel ve kavramsal temellerini anlamak için kritik öneme sahiptir.
+ ---
 
-* **Yapay Zeka Kavramları:**
-    * **"AI for Everyone" by Andrew Ng (Coursera):** Yapay zekanın ne olduğunu, neler yapabildiğini ve sınırlılıklarını teknik olmayan bir dille anlatan harika bir giriş kursu.
-    * **"Artificial Intelligence: A Modern Approach" by Stuart Russell and Peter Norvig (Kitap):** Yapay zeka alanındaki en kapsamlı ve klasik ders kitaplarından biri.
-* **Lineer Cebir ve Vektörler:**
-    * **Khan Academy - Linear Algebra:** Vektörler, matrisler ve determinantlar gibi temel kavramları adım adım, görsel bir yaklaşımla anlatan mükemmel bir kaynak.
-    * **3Blue1Brown - "Essence of Linear Algebra" (YouTube Serisi):** Lineer cebirin arkasındaki sezgisel "neden"i anlamanı sağlayan, görsel olarak çarpıcı bir seri.
-    * **"Linear Algebra and Its Applications" by Gilbert Strang (Kitap):** Daha derinlemesine bir matematiksel temel arayanlar için saygın bir referans.
-    * **"Mathematics for Machine Learning" (Coursera):** Makine öğrenimi için gerekli temel matematik konularını (lineer cebir, kalkülüs, olasılık) kapsayan bir uzmanlık alanı.
+ ### Faz 2: Transformer Mimarisi ve Büyük Dil Modelleri (LLM) Derinlemesi (3-5 Hafta)
 
----
+ Bu faz, LLM'lerin çekirdeğini oluşturan Transformer mimarisine odaklanacak.
 
-### Adım 2: Makine Öğrenimi, Derin Öğrenme ve Temel Kavramlar (Denetimli/Denetimsiz Öğrenme)
+ * **2.1 Transformer Mimarisi:**
+     * **Konular:** Dikkat Mekanizması (Attention Mechanism), Çoklu Başlı Dikkat (Multi-Head Attention), Encoder-Decoder Mimarisi, Pozisyonel Kodlama (Positional Encoding). "Attention Is All You Need" makalesini detaylıca incele.
+     * **Kaynaklar:**
+         * "The Illustrated Transformer" by Jay Alammar: Görsel ve sezgisel bir açıklama sunar.
+         * "Attention Is All You Need" (Orijinal Makale): Teknik detayları için temel referanstır.
+         * Stanford CS224N: Natural Language Processing with Deep Learning (Ders notları ve video kayıtları).
+ * **2.2 Transformer Tabanlı Modeller (BERT, GPT, T5 vb.):**
+     * **Konular:** BERT (Bidirectional Encoder Representations from Transformers), GPT (Generative Pre-trained Transformer) serisi, T5 gibi farklı Transformer tabanlı modellerin mimarileri, ön eğitim görevleri (pre-training tasks) ve temel kullanım alanları.
+     * **Kaynaklar:** Hugging Face'in model kartları ve blog yazıları.
+ * **2.3 Hugging Face Transformers Kütüphanesi ile Pratik:**
+     * **Uygulama:** Önceden eğitilmiş modelleri (BERT, GPT-2, vb.) kullanarak metin sınıflandırma, özetleme, soru yanıtlama gibi görevleri gerçekleştir.
+     * **Hugging Face "🤗 Transformers Course":** Bu kurs, kütüphaneyi ve LLM'leri pratik olarak kullanmak için mükemmel bir başlangıç noktasıdır.
+     * **Python ile Uygulama:** Mevcut Python bilgini kullanarak, bu modellerle çeşitli NLP görevlerini otomatize et.
 
-Matematiksel altyapıyı edindikten sonra, yapay zekanın temel alt alanlarından olan makine öğrenimine geçebilirsin.
+ ---
 
-* **Makine Öğrenimi Temelleri:**
-    * **"Machine Learning" by Andrew Ng (Coursera):** Makine öğrenimi alanında en popüler ve başlangıç için en iyi kurslardan biridir. Denetimli (regresyon, sınıflandırma) ve denetimsiz (kümeleme) öğrenme gibi temel algoritmaları ve kavramları işler.
-    * **"An Introduction to Statistical Learning" (Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani) (Kitap):** Makine öğrenimi algoritmalarına istatistiksel bir yaklaşımla derinlemesine bir bakış sunan oldukça tavsiye edilen bir kitap.
-* **Derin Öğrenmeye Giriş:**
-    * **"Deep Learning Specialization" by Andrew Ng (deeplearning.ai) (Coursera):** Yapay sinir ağları, evrişimli sinir ağları (CNN), tekrarlayan sinir ağları (RNN) gibi temel derin öğrenme mimarilerini kapsayan kapsamlı bir kurs.
-    * **fast.ai - "Practical Deep Learning for Coders":** Kodlama ve uygulama odaklı bir yaklaşımla derin öğrenmeyi öğretir, hızlıca pratik projeler yapmak isteyenler için idealdir.
-* **Denetimli (Supervised) ve Denetimsiz (Unsupervised) Öğrenme Kavramları:** Yukarıda bahsedilen Andrew Ng kursları bu kavramları detaylıca açıklar.
+ ### Faz 3: LLM'lerle Uygulama Geliştirme ve İnce Ayar (Fine-tuning) (4-6 Hafta)
 
----
+ Bu faz, LLM'leri kendi projelerine entegre etme ve özelleştirme üzerine yoğunlaşacak.
 
-### Adım 3: Büyük Dil Modellerine (LLM) Giriş ve Vektör Veritabanları
+ * **3.1 LLM'leri Kullanarak Uygulama Geliştirme:**
+     * **Konular:** Prompt Engineering, Zero-shot/Few-shot Learning, Chain-of-Thought Prompting. Mevcut LLM API'larını (OpenAI GPT, Google Gemini, Anthropic Claude vb.) kullanarak çeşitli uygulamalar geliştir.
+     * **Araçlar/Kütüphaneler:** **LangChain**, **LlamaIndex** gibi LLM orkestrasyon çerçevelerini incele ve kullan. Senin ASP.NET Core ve .NET bilgilerinle **Semantic Kernel** (Microsoft'un AI SDK'sı) tam sana göre olacaktır. Mevcut CV'inde Semantic Kernel ve AI Agents bilgisi de belirtilmiş.
+     * **Uygulama:** Bir chatbot, içerik oluşturma aracı veya veri çıkarma sistemi gibi bir proje geliştir.
+ * **3.2 LLM İnce Ayarı (Fine-tuning):**
+     * **Konular:** Transfer Öğrenimi, Veri Hazırlama (veri setlerini etiketleme/düzenleme), Düşük Kaynaklı Fine-tuning Yöntemleri (LoRA, QLoRA). Küçük ve özel veri kümeleri üzerinde modelleri nasıl ince ayar yapabileceğini öğren.
+     * **Uygulama:** Kendi alanına özel bir metin sınıflandırma veya metin üretme görevi için küçük bir modeli ince ayar yapmayı dene. Hugging Face `Trainer` API'ı bu konuda sana yardımcı olacaktır.
+ * **3.3 LLM Değerlendirme Metrikleri:**
+     * **Konular:** Perplexity, BLEU, ROUGE, insan değerlendirmesi. Modellerin performansını nasıl ölçeceğini ve karşılaştıracağını öğren.
 
-Makine öğrenimi ve derin öğrenmenin temelini attıktan sonra, son yılların en büyük gelişmelerinden biri olan Büyük Dil Modelleri'ne (LLM'ler) yönelebilirsin.
+ ---
 
-* **Büyük Dil Modellerine Giriş:**
-    * **Hugging Face Kaynakları (Özellikle "🤗 Transformers Course"):** LLM'ler ve Transformers kütüphanesi için birincil kaynaktır. Kütüphanenin dokümantasyonu, blog yazıları ve eğitimleri ile başlayabilirsin.
-    * **YouTube Kanalları:** "Code with Chris," "Weights & Biases," "AI Coffee Break with Let's Talk AI" gibi kanallar LLM'ler, dikkat mekanizmaları ve Transformer mimarisi üzerine bilgilendirici videolar sunar.
-    * **"Attention Is All You Need" (Orijinal Makale):** Transformer mimarisini tanıtan bu orijinal makale, teknik detayları anlamak için zaman ayırmaya değerdir.
-* **Vektör Veritabanları:**
-    * **Pinecone, Milvus, Weaviate Resmi Dokümantasyonları:** Bu vektör veritabanlarının ne işe yaradıklarını, nasıl kullanıldıklarını ve LLM ekosistemindeki önemlerini öğrenmek için en iyi kaynaklardır.
-    * **Medium ve Towards Data Science Blogları:** Vektör veritabanlarının LLM'lerle nasıl entegre edildiğini, RAG (Retrieval-Augmented Generation) gibi kavramları anlatan birçok makale bulabilirsin.
+ ### Faz 4: Vektör Veritabanları ve Gelişmiş LLM Uygulama Mimarileri (3-5 Hafta)
 
----
+ Bu faz, LLM'lerin yeteneklerini artıran kritik bir bileşen olan vektör veritabanlarına ve gelişmiş mimarilere odaklanacak.
 
-### Adım 4: İleri Düzey LLM'ler, Mimarileri ve Gelişmiş Konular
+ * **4.1 Vektör Gömme (Vector Embeddings) Detaylı İnceleme:**
+     * **Konular:** Model tabanlı gömmeler (Sentence-BERT, OpenAI Embeddings, Cohere Embeddings vb.). Kelime ve cümlelerin, hatta daha büyük metin parçalarının nasıl sayısal vektörlere dönüştürüldüğünü derinlemesine anla. Bu vektörlerin anlamsal ilişkileri nasıl kodladığını kavra.
+     * **Uygulama:** Farklı gömme modelleri kullanarak metin benzerliği hesaplamaları yap.
+ * **4.2 Vektör Veritabanları:**
+     * **Konular:** Vektör veritabanlarının çalışma prensipleri (yakın komşu arama algoritmaları - ANN), neden geleneksel veritabanlarının bu iş için uygun olmadığını anla.
+     * **Vektör Veritabanları:** **Pinecone, Milvus, Weaviate, Qdrant** gibi önde gelen vektör veritabanlarını araştır. Senin hali hazırda **Redis** bilgin olması büyük avantaj, Redis'in de Vector Search özelliği var.
+     * **Uygulama:** Seçtiğin bir vektör veritabanını kur (Docker ile kolayca yapabilirsin), kendi metin gömmelerini veritabanına ekle ve anlamsal aramalar yap.
+ * **4.3 Retrieval-Augmented Generation (RAG) Mimarisi:**
+     * **Konular:** RAG'ın ne olduğu, LLM'lerin bilgi tabanı dışındaki verilere erişerek daha doğru ve güncel yanıtlar üretmesini nasıl sağladığı. Şirket içi veri veya güncel internet verisiyle LLM'leri nasıl birleştirebileceğini anla.
+     * **Uygulama:** LangChain/LlamaIndex veya kendi kodunla basit bir RAG uygulaması (örneğin, bir PDF'ten bilgi çekip soru yanıtlama) geliştir. Bu, ChatGPT API entegrasyonu deneyiminin üzerine harika bir ekleme olacaktır.
+ * **4.4 AI Agents ve Otonom Sistemler (İleri Düzey):**
+     * **Konular:** LLM'leri kullanarak "agent"lar (ajanlar) oluşturma, araç kullanımı (tool use), planlama ve muhakeme yetenekleri. Mevcut CV'inde AI Agents bilgisi de belirtilmiş.
+     * **Uygulama:** Belirli görevleri yerine getirebilen, birden fazla adımı içeren basit bir AI agent geliştir. Bu, zaten hakim olduğun **Semantic Kernel** ile çok verimli bir şekilde yapılabilir.
 
-Bu aşamada, LLM'lerin derinlemesine mimarilerini ve daha karmaşık konuları inceleyebilirsin.
+ ---
 
-* **LLM Mimarileri (Transformer Mimarisi):**
-    * **"The Illustrated Transformer" by Jay Alammar:** Transformer mimarisinin görsel ve oldukça anlaşılır bir açıklamasını sunan harika bir blog yazısıdır.
-    * **Stanford CS224N - Natural Language Processing with Deep Learning:** Bu tür üniversite dersleri (ders notları ve video kayıtları genellikle halka açıktır), Transformer mimarisi ve LLM'ler üzerine ileri düzey bilgi sunar.
-* **LLM Eğitimi ve İnce Ayarı (Fine-tuning)::**
-    * **Hugging Face Transformers Kütüphanesi ve Eğitim Fonksiyonları:** Kütüphanenin kendi dokümantasyonu, önceden eğitilmiş modelleri nasıl kullanacağını ve kendi veri setlerinle nasıl ince ayar yapacağını detaylı bir şekilde anlatır.
-* **LLM Uygulamaları ve Etik Konular:**
-    * **Araştırma Makaleleri:** LLM'lerin son uygulamaları, sınırlamaları, yanlılık (bias) ve etik konuları hakkında güncel araştırma makalelerini takip etmek önemlidir.
+ ### Proje Odaklı Öğrenme ve Genel Tavsiyeler:
 
----
+ * **Mini Projeler:** Her fazda öğrendiğin konuları pekiştirmek için küçük, odaklanmış projeler yap. Örneğin:
+     * Metin sınıflandırma modeli (Spam tespiti).
+     * Basit bir metin özetleyici.
+     * ChatGPT API ile kendi özel veri setin (örn. hobi olarak ilgi duyduğun bir konuda) üzerinden soru-cevap uygulaması (RAG kullanarak).
+     * Kendi küçük bir LLM'in ince ayarını yaparak belirli bir yazma stili oluşturma.
+ * **Açık Kaynak Projeler:** Hugging Face'in açık kaynak topluluğuna katkıda bulunmayı veya ilgi duyduğun LLM projelerini incelemeyi düşünebilirsin.
+ * **Matematiksel Derinlik:** Lineer cebirdeki bilgin iyi olsa da, ileri düzey NLP ve LLM konularında daha derin matematiksel (olasılık, istatistik, optimizasyon) anlayış faydalı olacaktır. İhtiyaç duydukça bu konulara geri dön.
+ * **Araştırma Makaleleri:** Alan hızla geliştiği için önemli araştırma makalelerini (özellikle Google AI, OpenAI, Meta AI gibi büyük şirketlerin bloglarını ve yayınlarını) takip et.
+ * **Python Hakimiyeti:** Python yetkinliğin advanced seviyede, bu da AI/ML kütüphanelerini kullanırken büyük bir avantaj.
 
-## 🚀 Türkçe Eğitim Kaynakları 🇹🇷
-
-### Adım 1: Temel Yapay Zeka Kavramları, Lineer Cebir ve Vektörler
-
-Bu aşama, yapay zekanın matematiksel ve kavramsal temellerini Türkçe kaynaklarla anlamak için kritik öneme sahiptir.
-
-* **Yapay Zeka Kavramları:**
-    * **BTK Akademi - Yapay Zeka Eğitimleri:** Başlangıç seviyesinde Türkçe ve ücretsiz yapay zeka eğitimleri sunar.
-    * **Türkçe Üniversite Dersleri:** Türkiye'deki üniversitelerin (örn: ODTÜ, Boğaziçi, İTÜ) bilgisayar mühendisliği veya yapay zeka bölümlerinin web sitelerindeki ders notları ve açık ders materyallerini inceleyebilirsin.
-* **Lineer Cebir ve Vektörler:**
-    * **Khan Academy - Lineer Cebir (Türkçe):** Temel lineer cebir kavramlarını (vektörler, matrisler vb.) Türkçe anlatımla öğrenmek için mükemmel bir kaynak.
-    * **YouTube Kanalları (Türkçe):** "Matematik Defteri," "Bora Kasal" gibi kanallarda lineer cebir ve vektörler üzerine Türkçe anlatımlı videolar bulabilirsin.
-    * **Türkçe Üniversite Ders Kitapları:** Mühendislik fakültelerinde okutulan lineer cebir ders kitapları, matematiksel temeli sağlamak için iyi birer referanstır.
-
----
-
-### Adım 2: Makine Öğrenimi, Derin Öğrenme ve Temel Kavramlar (Denetimli/Denetimsiz Öğrenme)
-
-Matematiksel altyapıyı edindikten sonra, makine öğrenimine Türkçe kaynaklarla geçebilirsin.
-
-* **Makine Öğrenimi Temelleri:**
-    * **"Machine Learning" by Andrew Ng (Coursera) - Türkçe Alt Yazı Seçeneği:** Bu popüler makine öğrenimi kursunu Türkçe alt yazı seçeneğiyle takip edebilirsin.
-    * **BTK Akademi - Makine Öğrenmesi Eğitimleri:** Türkçe ve ücretsiz makine öğrenimi eğitimleri başlangıç için iyi bir seçenektir.
-    * **Udemy/Coursera (Türkçe Kurslar):** Türkçe eğitmenler tarafından verilen makine öğrenimi kursları mevcuttur; başlamadan önce kurs içeriklerini ve yorumları kontrol etmeni öneririm.
-* **Derin Öğrenmeye Giriş:**
-    * **"Deep Learning Specialization" by Andrew Ng (deeplearning.ai) (Coursera) - Türkçe Alt Yazı Seçeneği:** Bu kapsamlı derin öğrenme uzmanlığını Türkçe alt yazı seçeneğiyle takip edebilirsin.
-    * **BTK Akademi - Derin Öğrenme Eğitimleri:** BTK Akademi'nin derin öğrenme üzerine Türkçe dersleri de bulunmaktadır.
-    * **Medium/Yerli Bloglar:** Medium veya benzeri platformlarda derin öğrenme kavramlarını açıklayan Türkçe makaleler bulabilirsin.
-* **Denetimli (Supervised) ve Denetimsiz (Unsupervised) Öğrenme Kavramları:** Yukarıda bahsedilen Andrew Ng kursları ve diğer Türkçe makine öğrenimi kaynakları bu kavramları detaylıca açıklayacaktır.
-
----
-
-### Adım 3: Büyük Dil Modellerine (LLM) Giriş ve Vektör Veritabanları
-
-Makine öğrenimi ve derin öğrenmenin temelini attıktan sonra, LLM'lere Türkçe kaynaklarla yönelebilirsin.
-
-* **Büyük Dil Modellerine Giriş:**
-    * **Türkçe YouTube Kanalları:** "Veri Bilimi Okulu," "Yapay Zeka Bilgi" gibi kanallarda LLM'ler ve Transformer mimarisi üzerine Türkçe içerikler bulabilirsin.
-    * **Yerli Bloglar/Forumlar:** Türkçe yapay zeka toplulukları veya bloglar, LLM'ler hakkında başlangıç seviyesinde bilgiler ve örnekler sunabilir.
-* **Vektör Veritabanları:**
-    * **Türkçe Bloglar ve Makaleler:** Medium, LinkedIn Pulse gibi platformlarda veya yapay zeka odaklı yerli bloglarda vektör veritabanları ve LLM entegrasyonları üzerine Türkçe makaleler bulabilirsin.
-
----
-
-### Adım 4: İleri Düzey LLM'ler, Mimarileri ve Gelişmiş Konular
-
-Bu aşamada, LLM'lerin derinlemesine mimarilerini ve daha karmaşık konuları Türkçe kaynaklarla inceleyebilirsin.
-
-* **LLM Mimarileri (Transformer Mimarisi):**
-    * **Türkçe Makaleler ve Çeviriler:** "The Illustrated Transformer" gibi popüler İngilizce kaynakların Türkçe çevirileri veya bu konuyu anlatan yerli makaleler bulunabilir.
-    * **Türkçe Üniversite Dersleri:** Bazı üniversitelerin yapay zeka veya doğal dil işleme derslerinde Transformer mimarisi ve LLM'ler detaylı olarak işlenmektedir. Ders notları veya video kayıtları incelenebilir.
-* **LLM Eğitimi ve İnce Ayarı (Fine-tuning):**
-    * **Türkçe Kodlama Eğitimi Platformları:** Keras veya PyTorch ile LLM'lerin ince ayarını gösteren Türkçe eğitimler veya örnek projeler bulabilirsin.
-* **LLM Uygulamaları ve Etik Konular:**
-    * **Türkçe Tartışma Platformları:** Yapay zeka ve etik konularını tartışan yerli forumlar, bloglar veya sosyal medya grupları takip edilebilir.
-
----
-
-### Genel Tavsiyeler
-
-* **Pratik Uygulama:** Öğrendiklerini **Python** kullanarak küçük projelere dönüştürmek, bilgiyi pekiştirmenin en etkili yoludur. Kod yazmaktan ve veri setleriyle çalışmaktan çekinme!
-* **Topluluklara Katılın:** GitHub, Stack Overflow, Discord sunucuları ve yerel yapay zeka forumları gibi platformlarda diğer öğrencilerle ve uzmanlarla etkileşim kur. Sorular sor, projelerini paylaş.
-* **Kaggle:** Veri bilimi ve makine öğrenimi yarışmaları, veri kümeleri ve topluluk notebook'ları ile pratik becerilerini geliştirmek için harika bir platformdur.
-* **Sabırlı Ol ve Sürekli Öğren:** Yapay zeka, sürekli gelişen ve genişleyen bir alandır. Öğrenme süreci zaman alacaktır. Düzenli olarak pratik yap ve yeni gelişmeleri takip et.
+ Bu yol haritası, yazılım geliştirme geçmişini ve mevcut yapay zeka bilgilerini en iyi şekilde kullanarak seni LLM'ler ve vektör veritabanları konusunda uzmanlaştıracaktır. Başarılar dilerim!
